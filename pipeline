@@ -1,3 +1,6 @@
+
+pipeline {
+agent any
 stages {
     stage('Checkout') {
        steps {
@@ -5,7 +8,6 @@ stages {
       git url: 'https://github.com/Vishnu2k3/devops-lab-3.git', branch: 'main'
         	}
     	}
-
    stage('Build') {
        steps {
         // Example build step, replace with your build commands
@@ -36,5 +38,5 @@ stage('Deploy') {
     	failure {
         	echo 'Pipeline failed!'
     	}
-	}
+	}}
 
